@@ -1,5 +1,5 @@
 
-### Server Design Pattern: Cache-Aside
+## Server Design Pattern: _Cache-Aside_
 
 Applications that rely heavily on a data-store usually can benefit greatly from using the Cache-Aside Pattern. If used correctly, __this pattern can improve performance and help maintain consistency between the cache and the underlying data store.__
 
@@ -55,7 +55,7 @@ public static T CacheAside<T>(this ICacheManager cacheManager, Func<T> execute, 
 
 When you are updating data in your data store it is __very important to also invalidate the data in your cache,__ to keep consistency.
 
-![Updating Data using the Cache-Aside Pattern - Flow Diagram(https://raw.githubusercontent.com/ehime/pattern-cacheaside/master/assets/ca-updating-diagram.png "Updating Data using the Cache-Aside Pattern - Flow Diagram")
+![Updating Data using the Cache-Aside Pattern - Flow Diagram](https://github.com/ehime/pattern-cacheaside/blob/master/assets/ca-flow-diagram.png?raw=trueca-updating-diagram.png "Updating Data using the Cache-Aside Pattern - Flow Diagram")
 
 #### Caveats
 
